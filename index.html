@@ -1,0 +1,287 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sana Ramzan | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  background: #f1f5f9;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  background: #1e293b;
+  color: white;
+  padding: 30px 20px;
+  position: fixed;
+}
+
+.sidebar img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  display: block;
+  margin: auto;
+  border: 3px solid #6366f1;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.sidebar p {
+  text-align: center;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.sidebar a {
+  display: block;
+  margin: 12px 0;
+  text-decoration: none;
+  color: #cbd5f5;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.sidebar a:hover {
+  background: #334155;
+}
+
+/* MAIN */
+.main {
+  margin-left: 280px;
+  padding: 40px;
+  width: 100%;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  margin-bottom: 15px;
+  color: #1e293b;
+  border-bottom: 2px solid #6366f1;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.project-btns {
+  margin-top: 10px;
+}
+
+.project-btns button {
+  font-size: 13px;
+  padding: 6px 10px;
+  border: 1px solid #6366f1;
+  border-radius: 15px;
+  background: none;
+  color: #6366f1;
+  cursor: pointer;
+}
+
+.project-btns button:hover {
+  background: #6366f1;
+  color: white;
+}
+
+/* LIST STYLE */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #334155;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  width: 400px;
+  margin: 10% auto;
+  border-radius: 12px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.timeline {
+  border-left: 3px solid #6366f1;
+  padding-left: 15px;
+}
+
+.timeline p {
+  margin-bottom: 15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+  <img src="profile.jpg" alt="Profile Photo">
+  <h2>Sana Ramzan</h2>
+  <p>💻 CS Undergraduate | Aspiring Software Engineer</p>
+
+  <a href="#about">👩‍💻 About</a>
+  <a href="#education">🎓 Education</a>
+  <a href="#skills">⚙️ Skills</a>
+  <a href="#projects">📁 Projects</a>
+  <a href="#achievements">🏆 Achievements</a>
+  <a href="#contact">📫 Contact</a>
+</div>
+
+<div class="main">
+
+<div class="section" id="about">
+  <h2>👩‍💻 About Me</h2>
+  <p>
+    I am a Computer Science undergraduate and aspiring software engineer passionate about coding, problem-solving, and building real-world applications.
+    I enjoy working with C++, Java, Python, and SQL, and I continuously explore Data Structures and Software Development concepts.
+  </p>
+</div>
+
+<div class="section" id="education">
+  <h2>🎓 Education</h2>
+  <div class="timeline">
+    <p><b>BS Computer Science</b><br>Fatima Jinnah Women University (2024–2028)</p>
+    <p><b>ICS (Computer Science)</b><br>FG Degree College (2022–2024)</p>
+  </div>
+</div>
+
+<div class="section" id="skills">
+  <h2>⚙️ Skills</h2>
+  <div class="cards">
+    <div class="card">C / C++</div>
+    <div class="card">Java</div>
+    <div class="card">Python</div>
+    <div class="card">SQL</div>
+    <div class="card">Data Structures</div>
+    <div class="card">Networking</div>
+  </div>
+</div>
+
+<!-- ✅ UPDATED PROJECTS -->
+<div class="section" id="projects">
+  <h2>📁 Projects</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Tic Tac Toe</h3>
+      <p>C++ console game with win logic.</p>
+      <button onclick="openModal('Tic Tac Toe','C++ game with win logic and validation.')">Details</button>
+    </div>
+
+    <div class="card">
+      <h3>University System</h3>
+      <p>SQL database management system.</p>
+      <button onclick="openModal('University System','SQL system for student records.')">Details</button>
+    </div>
+
+    <div class="card">
+      <h3>Java GUI App</h3>
+      <p>Interactive desktop application.</p>
+      <button onclick="openModal('Java GUI App','Java Swing GUI with OOP concepts.')">Details</button>
+    </div>
+
+    <div class="card">
+      <h3>Stack Editor</h3>
+      <p>Undo system using stack.</p>
+      <button onclick="openModal('Stack Editor','Editor using stack for undo.')">Details</button>
+    </div>
+
+  </div>
+</div>
+
+<div class="section" id="achievements">
+  <h2>🏆 Achievements</h2>
+  <ul>
+    <li>✅ Completed multiple programming projects</li>
+    <li>✅ Built database system using SQL</li>
+    <li>⭐ Active learner</li>
+  </ul>
+</div>
+
+<div class="section" id="contact">
+  <h2>📫 Contact</h2>
+  <p>Email: samiikhan7774@gmail.com</p>
+</div>
+
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3 id="modal-title"></h3>
+    <p id="modal-text"></p>
+  </div>
+</div>
+
+<script>
+function openModal(title, text) {
+  document.getElementById('modal').style.display = 'block';
+  document.getElementById('modal-title').innerText = title;
+  document.getElementById('modal-text').innerText = text;
+}
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
