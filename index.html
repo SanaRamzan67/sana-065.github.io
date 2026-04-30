@@ -158,6 +158,11 @@ ul li {
   font-size: 20px;
 }
 
+/* FIX FOR MULTI-LINE TEXT */
+#modal-text {
+  white-space: pre-line;
+}
+
 .timeline {
   border-left: 3px solid #6366f1;
   padding-left: 15px;
@@ -172,6 +177,7 @@ ul li {
 
 <body>
 
+<!-- SIDEBAR -->
 <div class="sidebar">
   <img src="profile.jpg" alt="Profile Photo">
   <h2>Sana Ramzan</h2>
@@ -185,6 +191,7 @@ ul li {
   <a href="#contact">📫 Contact</a>
 </div>
 
+<!-- MAIN -->
 <div class="main">
 
 <div class="section" id="about">
@@ -192,6 +199,8 @@ ul li {
   <p>
     I am a Computer Science undergraduate and aspiring software engineer passionate about coding, problem-solving, and building real-world applications.
     I enjoy working with C++, Java, Python, and SQL, and I continuously explore Data Structures and Software Development concepts.
+    <br><br>
+    I aim to grow as a developer, contribute to impactful projects, and strengthen my skills in modern technologies.
   </p>
 </div>
 
@@ -215,7 +224,7 @@ ul li {
   </div>
 </div>
 
-<!-- ✅ UPDATED PROJECTS -->
+<!-- PROJECTS -->
 <div class="section" id="projects">
   <h2>📁 Projects</h2>
 
@@ -224,25 +233,33 @@ ul li {
     <div class="card">
       <h3>Tic Tac Toe</h3>
       <p>C++ console game with win logic.</p>
-      <button onclick="openModal('Tic Tac Toe','C++ game with win logic and validation.')">Details</button>
+      <div class="project-btns">
+        <button onclick="openModal('Tic Tac Toe','A console-based C++ game.\nIncludes win/draw detection.\nHandles user input validation.\nBuilt using basic programming logic.')">Details</button>
+      </div>
     </div>
 
     <div class="card">
       <h3>University System</h3>
       <p>SQL database management system.</p>
-      <button onclick="openModal('University System','SQL system for student records.')">Details</button>
+      <div class="project-btns">
+        <button onclick="openModal('University System','SQL-based database system.\nManages student records efficiently.\nIncludes attendance and grading.\nUses relational database concepts.')">Details</button>
+      </div>
     </div>
 
     <div class="card">
       <h3>Java GUI App</h3>
       <p>Interactive desktop application.</p>
-      <button onclick="openModal('Java GUI App','Java Swing GUI with OOP concepts.')">Details</button>
+      <div class="project-btns">
+        <button onclick="openModal('Java GUI App','Built using Java Swing.\nProvides interactive UI experience.\nHandles user events and inputs.\nDemonstrates OOP concepts.')">Details</button>
+      </div>
     </div>
 
     <div class="card">
       <h3>Stack Editor</h3>
       <p>Undo system using stack.</p>
-      <button onclick="openModal('Stack Editor','Editor using stack for undo.')">Details</button>
+      <div class="project-btns">
+        <button onclick="openModal('Stack Editor','Implements undo functionality.\nUses stack data structure.\nTracks user actions efficiently.\nDemonstrates LIFO principle.')">Details</button>
+      </div>
     </div>
 
   </div>
@@ -252,18 +269,20 @@ ul li {
   <h2>🏆 Achievements</h2>
   <ul>
     <li>✅ Completed multiple programming projects</li>
-    <li>✅ Built database system using SQL</li>
-    <li>⭐ Active learner</li>
+    <li>✅ Built database management system using SQL</li>
+    <li>⭐ Active learner of new technologies</li>
   </ul>
 </div>
 
 <div class="section" id="contact">
   <h2>📫 Contact</h2>
   <p>Email: samiikhan7774@gmail.com</p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/" target="_blank">Visit Profile</a></p>
 </div>
 
 </div>
 
+<!-- MODAL -->
 <div id="modal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
@@ -278,8 +297,16 @@ function openModal(title, text) {
   document.getElementById('modal-title').innerText = title;
   document.getElementById('modal-text').innerText = text;
 }
+
 function closeModal() {
   document.getElementById('modal').style.display = 'none';
+}
+
+window.onclick = function(event) {
+  let modal = document.getElementById('modal');
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
 }
 </script>
 
