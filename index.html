@@ -31,12 +31,15 @@ body {
 }
 
 .sidebar img {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: 50% 20%; /* 👈 FACE ALIGN FIX */
   display: block;
   margin: auto;
+  border: 3px solid #6366f1;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .sidebar h2 {
@@ -171,7 +174,7 @@ ul li {
 
 <!-- SIDEBAR -->
 <div class="sidebar">
-  <img src="profile.jpg">
+  <img src="profile.jpg" alt="Profile Photo">
   <h2>Sana Ramzan</h2>
   <p>💻 CS Undergraduate | Aspiring Software Engineer</p>
 
@@ -186,7 +189,6 @@ ul li {
 <!-- MAIN -->
 <div class="main">
 
-<!-- ABOUT -->
 <div class="section" id="about">
   <h2>👩‍💻 About Me</h2>
   <p>
@@ -197,7 +199,6 @@ ul li {
   </p>
 </div>
 
-<!-- EDUCATION -->
 <div class="section" id="education">
   <h2>🎓 Education</h2>
   <div class="timeline">
@@ -206,7 +207,6 @@ ul li {
   </div>
 </div>
 
-<!-- SKILLS -->
 <div class="section" id="skills">
   <h2>⚙️ Skills</h2>
   <div class="cards">
@@ -219,7 +219,6 @@ ul li {
   </div>
 </div>
 
-<!-- PROJECTS -->
 <div class="section" id="projects">
   <h2>📁 Projects</h2>
 
@@ -229,7 +228,7 @@ ul li {
       <h3>Tic Tac Toe</h3>
       <p>C++ console game with win logic.</p>
       <div class="project-btns">
-        <button onclick="openModal('Tic Tac Toe','A C++ console game where two players play X and O. It includes win checking logic, draw conditions, and input validation. This project improved my programming logic.')">Details</button>
+        <button onclick="openModal('Tic Tac Toe','A C++ console game with win logic, draw conditions, and input validation.')">Details</button>
       </div>
     </div>
 
@@ -237,45 +236,26 @@ ul li {
       <h3>University System</h3>
       <p>SQL database management system.</p>
       <div class="project-btns">
-        <button onclick="openModal('University System','A database system built using SQL to manage student records, attendance, and grades efficiently. It helps understand relational databases.')">Details</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Java GUI App</h3>
-      <p>Interactive desktop application.</p>
-      <div class="project-btns">
-        <button onclick="openModal('Java GUI App','A Java Swing-based GUI application with buttons and event handling. It demonstrates object-oriented programming concepts.')">Details</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Stack Editor</h3>
-      <p>Undo system using stack.</p>
-      <div class="project-btns">
-        <button onclick="openModal('Stack Editor','A text editor project that uses stack data structure to implement undo functionality. It shows real-life application of stacks.')">Details</button>
+        <button onclick="openModal('University System','SQL-based system to manage student records, attendance, and grades.')">Details</button>
       </div>
     </div>
 
   </div>
 </div>
 
-<!-- ACHIEVEMENTS -->
 <div class="section" id="achievements">
   <h2>🏆 Achievements</h2>
   <ul>
     <li>✅ Completed multiple programming projects</li>
     <li>✅ Built database management system using SQL</li>
-    <li>✅ Strong understanding of Data Structures & OOP</li>
     <li>⭐ Active learner of new technologies</li>
   </ul>
 </div>
 
-<!-- CONTACT -->
 <div class="section" id="contact">
   <h2>📫 Contact</h2>
   <p>Email: samiikhan7774@gmail.com</p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/sana-ramzan-b21241407" target="_blank">Visit Profile</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/" target="_blank">Visit Profile</a></p>
 </div>
 
 </div>
